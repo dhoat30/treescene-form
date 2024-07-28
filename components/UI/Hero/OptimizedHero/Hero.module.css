@@ -1,0 +1,19 @@
+.heroSection {
+  background: var(--dark-surface-container-lowest);
+}
+
+.container {
+  align-items: center;
+  height: calc(90vh + 100px);
+  gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    height: auto;
+    padding: 80px 8px;
+    grid-template-columns: 1fr;
+  }
+}
