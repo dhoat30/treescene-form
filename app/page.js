@@ -10,29 +10,18 @@ export async function generateMetadata({ params, searchParams }, parent) {
     if (data.length > 0) {
         const seoData = data[0].yoast_head_json
         return {
-            title: seoData.title,
-            description: seoData.description,
-            metadataBase: new URL('https://webduel.co.nz'),
+            title: "Request A Free Quote - Treescene NZ Limited",
+            description: "Trust Tree Scene for Safe and Professional Tree Removal, Trimming, and Stump Grinding Services",
+            metadataBase: new URL('https://form.treescene.co.nz'),
             alternates: {
-                canonical: `https://webduel.co.nz/website-enquiry`,
+                canonical: `https://form.treescene.co.nz`,
             },
             openGraph: {
-                title: seoData.title,
-                description: seoData.description,
-                url: 'https://webduel.co.nz',
-                siteName: 'webduel',
-                images: [
-                    {
-                        url: seoData.og_image && seoData.og_image.url,
-                        width: 800,
-                        height: 600,
-                    },
-                    {
-                        url: seoData?.og_image && seoData.og_image[0].url,
-                        width: 1800,
-                        height: 1600,
-                    },
-                ],
+                title: "Request A Free Quote - Treescene NZ Limited",
+                description: "Trust Tree Scene for Safe and Professional Tree Removal, Trimming, and Stump Grinding Services",
+                url: 'https://form.treescene.co.nz',
+                siteName: 'Tree Scene',
+
                 type: 'website',
             },
         }
@@ -41,11 +30,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
 }
 
 export default async function Page() {
-    const data = await getPageData("website-price-calculator")
     return (
         <>
             <main>
-                <WebsiteInquiryPage data={data[0]} />
+                <WebsiteInquiryPage />
             </main>
         </>
 

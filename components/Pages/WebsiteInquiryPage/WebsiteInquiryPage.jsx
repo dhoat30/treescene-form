@@ -12,7 +12,7 @@ const WebsiteEnquiryForm = dynamic(() =>
   import("@/components/UI/Forms/WebsiteEnquiryForm")
 );
 
-export default function WebsiteInquiryPage({ data }) {
+export default function WebsiteInquiryPage() {
   return (
     <Section>
       <Container maxWidth="lg" className="container">
@@ -27,10 +27,10 @@ export default function WebsiteInquiryPage({ data }) {
             At Tree Scene, we understand the importance of maintaining healthy
             and safe trees. Our team of experts provides top-notch tree care
             services, including tree removal, trimming, stump grinding, and
-            more. Whether you're a homeowner, property manager, or landscaper,
-            we're here to help.
+            more. Whether you are a homeowner, property manager, or landscaper,
+            we are here to help.
           </Typography>
-          <div
+          {/* <div
             className="image-wrapper"
             style={{
               paddingBottom: `${
@@ -40,14 +40,14 @@ export default function WebsiteInquiryPage({ data }) {
               }%`,
             }}
           >
-            {/* <Image
+            <Image
               src={data.acf.hero_section.graphic.desktop.url}
               alt={data.acf.hero_section.graphic.desktop.alt}
               fill
               priority={true}
               sizes="(max-width: 1000px) 100vw, 40vw"
-            /> */}
-          </div>
+            />
+          </div> */}
         </div>
       </Container>
     </Section>
