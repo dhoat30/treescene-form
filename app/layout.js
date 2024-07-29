@@ -12,7 +12,7 @@ import { lightTheme } from '../utlis/themeSettings'
 import Header from '@/components/UI/Header/Header';
 import Footer from '@/components/UI/Footer/Footer';
 
-// import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 // fonts settings
 
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={`${work_sans.variable}`}>
-      {/* <GoogleTagManager gtmId="GTM-N347V98" /> */}
+      <GoogleTagManager gtmId="GTM-5FNFX47G" />
       <body >
         <ThemeProvider theme={lightTheme}>
           <Header />
