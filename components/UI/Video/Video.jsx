@@ -60,6 +60,7 @@ const ContainerStyled = styled.div`
   .img-wrapper {
     img {
       object-fit: cover;
+      border-radius: 12px;
     }
   }
 `;
