@@ -239,7 +239,7 @@ svg.Mui-active{
     background: var(--light--surface-container);
 border-radius: 12px; 
     @media(max-width: 600px){ 
-        padding: 0 16px 24px 16px; 
+        padding: 16px 16px 24px 16px; 
 
     }
     .Mui-error{ 

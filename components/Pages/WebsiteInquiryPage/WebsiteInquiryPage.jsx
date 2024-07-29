@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import WebsiteInquiryLongForm from "@/components/UI/Forms/WebsiteInquiryLongForm";
+import Video from "@/components/UI/Video/Video";
 
 const WebsiteEnquiryForm = dynamic(() =>
   import("@/components/UI/Forms/WebsiteEnquiryForm")
@@ -16,9 +17,6 @@ export default function WebsiteInquiryPage() {
   return (
     <Section>
       <Container maxWidth="lg" className="container">
-        <div className="form-container">
-          <WebsiteInquiryLongForm className="row-max form-component" />
-        </div>
         <div className="content-container">
           <Typography variant="h4" component="h1" className="title">
             Get a Free Quote for Your Tree Care Needs
@@ -30,24 +28,15 @@ export default function WebsiteInquiryPage() {
             more. Whether you are a homeowner, property manager, or landscaper,
             we are here to help.
           </Typography>
-          {/* <div
-            className="image-wrapper"
-            style={{
-              paddingBottom: `${
-                (data.acf.hero_section.graphic.desktop.height /
-                  data.acf.hero_section.graphic.desktop.width) *
-                100
-              }%`,
-            }}
-          >
-            <Image
-              src={data.acf.hero_section.graphic.desktop.url}
-              alt={data.acf.hero_section.graphic.desktop.alt}
-              fill
-              priority={true}
-              sizes="(max-width: 1000px) 100vw, 40vw"
+          <div className="image-wrapper">
+            <Video
+              placeholderImage={{ url: "/video-thumbnail.jpg" }}
+              videoID="RrLRWKFMonc"
             />
-          </div> */}
+          </div>
+        </div>
+        <div className="form-container">
+          <WebsiteInquiryLongForm className="row-max form-component" />
         </div>
       </Container>
     </Section>
@@ -83,6 +72,12 @@ const Section = styled.section`
       padding: 16px 24px;
       background: var(--light-surface-container);
       border-radius: 12px;
+      .description {
+        margin-top: 8px;
+      }
+      @media (max-width: 1000px) {
+        position: static;
+      }
       @media (max-width: 600px) {
         padding: 16px 16px;
       }
@@ -90,6 +85,7 @@ const Section = styled.section`
       .image-wrapper {
         position: relative;
         width: 100%;
+        margin-top: 24px;
       }
     }
   }
